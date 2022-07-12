@@ -1,0 +1,19 @@
+name: Publish package to GitHub Packages
+on: push
+jobs:
+  publish:
+    runs-on: ubuntu-latest 
+    permissions: 
+      contents: read
+      packages: write 
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          java-version: '8'
+          distribution: 'adopt'
+      - name: Create settings
+        run: echo "<settings><interactiveMode>false</interactiveMode><profiles/><servers><server><id>github</id><configuration><httpHeaders><property><name>Authorization</name><value>Bearer ${{ secrets.GITHUB_TOKEN }}</value></property></httpHeaders></configuration></server></servers><mirrors /></settings>" > ~/.m2/settings.xml
+      - name: Publish third party library package
+        run: mvn deploy:deploy-file  -DpomFile=$GITHUB_WORKSPACE/lib/eid-tsl-core-1.0.0-20100816.pom -Dfile=$GITHUB_WORKSPACE/lib/eid-tsl-core-1.0.0-20100816.jar -DrepositoryId=github -Durl=https://maven.pkg.github.com/RegioneER/parer.sacer.parent
+
