@@ -14,7 +14,7 @@
         <name>Engineering</name>
     </organization>
     <scm>
-        <developerConnection>scm:git:git@github.com:RegioneER/parer.sacer.parent.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/RegioneER/parer.sacer.parent.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     <properties>
@@ -115,6 +115,10 @@
             <id>central</id>
             <url>https://repo1.maven.org/maven2/</url>           
         </repository>               
+        <repository>
+			<id>pentaho</id>
+			<url>https://public.nexus.pentaho.org/content/groups/omni</url>
+		</repository>  
      </repositories>
 
     <pluginRepositories>
