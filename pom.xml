@@ -118,7 +118,12 @@
         <repository>
 			<id>pentaho</id>
 			<url>https://public.nexus.pentaho.org/content/groups/omni</url>
-		</repository>  
+		</repository>
+        <repository>
+			<id>cefdigital</id>
+			<name>cefdigital</name>
+			<url>https://ec.europa.eu/digital-building-blocks/artifact/content/repositories/esignaturedss/</url>
+		  </repository>    
      </repositories>
 
     <pluginRepositories>
