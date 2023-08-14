@@ -109,7 +109,11 @@
 			<id>cefdigital</id>
 			<name>cefdigital</name>
 			<url>https://ec.europa.eu/digital-building-blocks/artifact/content/repositories/esignaturedss/</url>
-		  </repository>    
+		  </repository>
+          <repository>
+            <id>rhga</id>
+            <url>https://maven.repository.redhat.com/ga</url>
+        </repository>              
      </repositories>
 
     <pluginRepositories>
