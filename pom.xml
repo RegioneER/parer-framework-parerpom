@@ -14,7 +14,7 @@
         <name>Engineering</name>
     </organization>
     <scm>
-        <developerConnection>scm:git:https://github.com/RegioneER/parer.sacer.parent.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/RegioneER/parer-framework-parerpom.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     <properties>
@@ -80,14 +80,14 @@
     <distributionManagement>
         <repository>
           <id>github</id>
-          <url>https://maven.pkg.github.com/RegioneER/parer.sacer.parent</url>
+          <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom</url>
         </repository>        
     </distributionManagement>
 
     <repositories>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/RegioneER/parer.sacer.parent/</url>
+            <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom/</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
