@@ -30,7 +30,7 @@ Progetto a cura di [Engineering Ingegneria Informatica S.p.A.](https://www.eng.i
 
 # Contributi
 
-Se interessati a crontribuire alla crescita del progetto può scrivere all'indirizzo email <a href="mailto:areasviluppoparer@regione.emilia-romagna.it">areasviluppoparer@regione.emilia-romagna.it</a>.
+Se interessati a crontribuire alla crescita del progetto potete scrivere all'indirizzo email <a href="mailto:areasviluppoparer@regione.emilia-romagna.it">areasviluppoparer@regione.emilia-romagna.it</a>.
 
 # Autori
 
