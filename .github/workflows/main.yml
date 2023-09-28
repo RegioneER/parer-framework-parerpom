@@ -13,7 +13,7 @@ on:
         default: '8'        
 jobs:
   maven-release:
-    uses: RegioneER/parer-github-template/.github/workflows/release.yml@main
+    uses: RegioneER/parer-github-template/.github/workflows/release.yml@v1
     with:
       version: ${{ inputs.version }}
       java: ${{ inputs.java }}
