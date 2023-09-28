@@ -6,6 +6,7 @@ on:
         description: "Version number"
         required: true
         type: string
+        default: '8'
 jobs:
   maven-release:
     uses: RegioneER/parer-github-template/.github/workflows/release.yml@v1
