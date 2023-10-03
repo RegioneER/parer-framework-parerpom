@@ -110,10 +110,39 @@
 			<name>cefdigital</name>
 			<url>https://ec.europa.eu/digital-building-blocks/artifact/content/repositories/esignaturedss/</url>
 		  </repository>
-          <repository>
+        <repository>
             <id>rhga</id>
             <url>https://maven.repository.redhat.com/ga</url>
-        </repository>              
+        </repository>
+        <!-- GitHub repositories -->
+        <repository>
+            <id>parer-framework-spago</id>
+            <url>https://maven.pkg.github.com/RegioneER/parer-framework-spagolite</url>
+        </repository>
+        <repository>
+            <id>parer-sacer-xml</id>
+            <url>https://maven.pkg.github.com/RegioneER/parer-sacer-xml</url>
+        </repository>
+        <repository>
+            <id>parer-sacer-jpa</id>
+            <url>https://maven.pkg.github.com/RegioneER/parer-sacer-jpa</url>
+        </repository>
+        <repository>
+            <id>parer-verificafirma-eidas-beans</id>
+            <url>https://maven.pkg.github.com/RegioneER/parer-verificafirma-eidas-beans</url>
+        </repository>
+        <repository>
+            <id>parer-verificafirma-crypto-beans</id>
+            <url>https://maven.pkg.github.com/RegioneER/parer-verificafirma-crypto-beans</url>
+        </repository>
+        <repository>
+            <id>parer-retry</id>
+            <url>https://maven.pkg.github.com/RegioneER/parer-retry</url>
+        </repository>
+        <repository>
+            <id>parer-eng-mityclib</id>
+            <url>https://maven.pkg.github.com/RegioneER/parer-eng-mityclib</url>
+        </repository>                                
      </repositories>
 
     <pluginRepositories>
