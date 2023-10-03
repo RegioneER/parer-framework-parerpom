@@ -142,7 +142,11 @@
         <repository>
             <id>parer-eng-mityclib</id>
             <url>https://maven.pkg.github.com/RegioneER/parer-eng-mityclib</url>
-        </repository>                                
+        </repository>
+        <repository>
+            <id>parer-blob-info</id>
+            <url>https://maven.pkg.github.com/RegioneER/parer-blob-info</url>
+        </repository>                                         
      </repositories>
 
     <pluginRepositories>
