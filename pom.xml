@@ -113,7 +113,11 @@
           <repository>
             <id>rhga</id>
             <url>https://maven.repository.redhat.com/ga</url>
-        </repository>              
+        </repository>
+        <repository>
+			<id>alfresco</id>
+			<url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
+		</repository>                       
      </repositories>
 
     <pluginRepositories>
