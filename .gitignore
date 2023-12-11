@@ -1,6 +1,8 @@
 /target/
+/nbactions.xml
+*.iml
+**/.idea
+.idea/
 .project
-.classpath
-/.settings/
-nb-configuration.xml
-nbactions.xml
+.settings/
+.vscode/
