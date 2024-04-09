@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>it.eng.parer</groupId>
     <artifactId>parer-pom</artifactId>
-    <version>4.2.1-SNAPSHOT</version>
+    <version>5.2.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Parer pom</name>
     <description>Parer POM di base
@@ -21,8 +21,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <!-- third party libraries -->
         <!-- spring --> 
-        <spring.version>4.3.30.RELEASE</spring.version>
-        <spring.security.version>4.2.20.RELEASE</spring.security.version>
+        <spring.version>5.3.30</spring.version>
+        <spring.security.version>5.8.8</spring.security.version>
         <spring.security.saml.version>1.0.10.RELEASE</spring.security.saml.version>
         <spring-retry.version>1.3.3</spring-retry.version>
         <!-- logging -->
