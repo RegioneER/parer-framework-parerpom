@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>it.eng.parer</groupId>
     <artifactId>parer-pom</artifactId>
-    <version>5.2.1-SNAPSHOT</version>
+    <version>5.2.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Parer pom</name>
     <description>Parer POM di base
@@ -55,7 +55,7 @@
         <!-- miscelenous --> 
         <joda-time.version>2.12.5</joda-time.version> <!-- era 2.10.14 -->
         <jettison.version>1.5.4</jettison.version> 
-        <poi.version>4.1.2</poi.version>
+        <poi.version>5.2.3</poi.version>
         <jackson-core.version>2.13.5</jackson-core.version>
         <xalan.version>2.7.2</xalan.version>
         <xerces.version>2.12.0</xerces.version>
@@ -85,6 +85,7 @@
     </distributionManagement>
 
     <repositories>
+        
         <repository>
             <id>github</id>
             <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom/</url>
@@ -319,9 +320,19 @@
                     <version>3.6.0</version>
                 </plugin>
                 <plugin>
-				    <groupId>org.apache.maven.plugins</groupId>
-				    <artifactId>maven-antrun-plugin</artifactId>
-				    <version>3.1.0</version>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>properties-maven-plugin</artifactId>
+                    <version>1.2.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>keytool-maven-plugin</artifactId>
+                    <version>1.7</version>
                 </plugin>
             </plugins>
         </pluginManagement>
