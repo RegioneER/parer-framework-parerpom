@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>it.eng.parer</groupId>
     <artifactId>parer-pom</artifactId>
-    <version>6.3.0</version>
+    <version>5.2.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Parer pom</name>
     <description>Parer POM di base
@@ -14,13 +14,11 @@
         <name>Engineering</name>
     </organization>
     <scm>
-        <developerConnection>scm:git:git@gitlab.ente.regione.emr.it:parer/framework-parerpom.git</developerConnection>
-        <tag>parer-pom-6.3.0</tag>
+        <developerConnection>scm:git:https://github.com/RegioneER/parer-framework-parerpom.git</developerConnection>
+        <tag>HEAD</tag>
     </scm>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        
-<!--        <detectJavaApiLink>false</detectJavaApiLink>-->
         <!-- third party libraries -->
         <!-- spring --> 
         <spring.version>5.3.30</spring.version>
@@ -57,7 +55,7 @@
         <!-- miscelenous --> 
         <joda-time.version>2.12.5</joda-time.version> <!-- era 2.10.14 -->
         <jettison.version>1.5.4</jettison.version> 
-        <poi.version>4.1.2</poi.version>
+        <poi.version>5.2.3</poi.version>
         <jackson-core.version>2.13.5</jackson-core.version>
         <xalan.version>2.7.2</xalan.version>
         <xerces.version>2.12.0</xerces.version>
@@ -72,55 +70,25 @@
  		<jaxb.version>2.3.0</jaxb.version>
         <javax.activation.version>1.2.0</javax.activation.version>
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
-        <javax.xml.soap-api.version>1.4.0</javax.xml.soap-api.version>             
+        <javax.xml.soap-api.version>1.4.0</javax.xml.soap-api.version>                
         <!-- junit last version 4.13.2 (end of maintenance), moved to junit 5 -->
         <junit.version>4.13.2</junit.version>
         <junit-jupiter.version>5.6.3</junit-jupiter.version>
         <taglibs-standard-jstlel.version>1.2.5</taglibs-standard-jstlel.version>
-        <!--JDK11-->
-        <jaxws-api.version>2.3.1</jaxws-api.version>
-        <jaxws-tools.version>2.3.1</jaxws-tools.version>
     </properties>
 
     <distributionManagement>
         <repository>
-            <id>rel</id>
-            <url>https://nexus.ente.regione.emr.it/repository/parer-release/</url>
-        </repository>
-        <snapshotRepository>
-            <id>snap</id>
-            <url>https://nexus.ente.regione.emr.it/repository/parer-snapshot/</url>
-        </snapshotRepository>
+          <id>github</id>
+          <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom</url>
+        </repository>        
     </distributionManagement>
+
     <repositories>
         
         <repository>
-            <id>central</id>
-            <url>https://nexus.ente.regione.emr.it/repository/central/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>dcm4che</id>
-            <url>https://nexus.ente.regione.emr.it/repository/dcm4che/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>rel</id>
-            <url>https://nexus.ente.regione.emr.it/repository/parer-release/</url>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom/</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
@@ -131,65 +99,32 @@
             </snapshots>
         </repository>
         <repository>
-            <id>snap</id>
-            <url>https://nexus.ente.regione.emr.it/repository/parer-snapshot/</url>
-            <releases>
-                <enabled>false</enabled>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>           
+        </repository>               
+        <repository>
+			<id>pentaho</id>
+			<url>https://repo.orl.eng.hitachivantara.com/artifactory/pnt-mvn/</url>
+		</repository>
+        <repository>
+			<id>cefdigital</id>
+			<name>cefdigital</name>
+			<url>https://ec.europa.eu/digital-building-blocks/artifact/content/repositories/esignaturedss/</url>
+		  </repository>
+          <repository>
+            <id>rhga</id>
+            <url>https://maven.repository.redhat.com/ga</url>
         </repository>
         <repository>
-            <id>thirdparty</id>
-            <url>https://nexus.ente.regione.emr.it/repository/thirdparty/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://nexus.ente.regione.emr.it/repository/Spring_Milestone/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>jboss-eap-maven-repository</id>
-            <name>Rer Jboss EAP proxy (RER)</name>
-            <url>https://nexus.ente.regione.emr.it/repository/jboss-eap-maven-repository</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>joinup</id>
-            <url>https://nexus.ente.regione.emr.it/repository/joinup/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
+			<id>alfresco</id>
+			<url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
+		</repository>                       
+     </repositories>
+
     <pluginRepositories>
         <pluginRepository>
             <id>central</id>
-            <url>https://nexus.ente.regione.emr.it/repository/central/</url>
+            <url>https://repo1.maven.org/maven2/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -201,14 +136,14 @@
     <build>
         <pluginManagement>
             <plugins>
-				<!-- plugin base di maven -->
+                <!-- plugin base di maven -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.11.0</version>
                     <configuration>
-                        <source>11</source>
-                        <target>11</target>
+                        <source>1.8</source>
+                        <target>1.8</target>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -223,8 +158,6 @@
                             </goals>
                             <configuration>
                                 <doclint>none</doclint>
-                                <!-- Applied for jdk11 bug -->
-                                <detectJavaApiLink>true</detectJavaApiLink>
                             </configuration>
                         </execution>
                     </executions>
@@ -291,7 +224,7 @@
                         <locales>it</locales>
                     </configuration>
                     <dependencies>
-						<!-- Nota bene: la versione 3.2.0 al momento non upgradabile vedi errore 
+                        <!-- Nota bene: la versione 3.2.0 al momento non upgradabile vedi errore 
                         : java.lang.NoSuchMethodError: org.apache.maven.wagon.shared.http.AbstractHttpClientWagon.getBufferCapacityForTransfer -->
                         <dependency>
                             <groupId>org.apache.maven.wagon</groupId>
@@ -310,11 +243,16 @@
                     <artifactId>maven-release-plugin</artifactId>
                     <version>3.0.1</version>
                 </plugin>
-				<!-- plugin accessori esterni a maven -->
+                <!-- plugin accessori esterni a maven -->
                 <plugin>
                     <groupId>org.apache.cxf</groupId>
                     <artifactId>cxf-codegen-plugin</artifactId>
-                    <version>3.3.0</version>
+                    <version>2.7.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>xmlbeans-maven-plugin</artifactId>
+                    <version>2.3.3</version>
                 </plugin>
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
@@ -342,20 +280,20 @@
                     </executions>
                     <configuration>
                         <name>OWASP Report</name>
-						<!-- <nexusServerId>rel</nexusServerId> -->
+                        <!-- <nexusServerId>rel</nexusServerId> -->
                         <failOnError>false</failOnError>
-						<!-- <suppressionFiles> -->
-						<!-- <suppressionFile>site/suppress.xml</suppressionFile> -->
-						<!-- </suppressionFiles> -->
+                        <!-- <suppressionFiles> -->
+                        <!-- <suppressionFile>site/suppress.xml</suppressionFile> -->
+                        <!-- </suppressionFiles> -->
                     </configuration>
                 </plugin>
-				<!-- A partire dalla versione 3.1.0 verificare del classnotfound (SAX error) -->
+                <!-- A partire dalla versione 3.1.0 verificare del classnotfound (SAX error) -->
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>exec-maven-plugin</artifactId>
                     <version>3.0.0</version>
                 </plugin>
-				<!-- Non aggiornabile : richiede la versione 11 di Java-->
+                <!-- Non aggiornabile : richiede la versione 11 di Java-->
                 <plugin>
                     <groupId>net.revelc.code.formatter</groupId>
                     <artifactId>formatter-maven-plugin</artifactId>
@@ -382,9 +320,19 @@
                     <version>3.6.0</version>
                 </plugin>
                 <plugin>
-				    <groupId>org.apache.maven.plugins</groupId>
-				    <artifactId>maven-antrun-plugin</artifactId>
-				    <version>3.1.0</version>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>properties-maven-plugin</artifactId>
+                    <version>1.2.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>keytool-maven-plugin</artifactId>
+                    <version>1.7</version>
                 </plugin>
             </plugins>
         </pluginManagement>
@@ -392,7 +340,7 @@
             <plugin>
                 <groupId>net.revelc.code.formatter</groupId>
                 <artifactId>formatter-maven-plugin</artifactId>
-				<!-- <configuration> <lineEnding>AUTO</lineEnding> </configuration> -->
+                <!-- <configuration> <lineEnding>AUTO</lineEnding> </configuration> -->
                 <executions>
                     <execution>
                         <goals>
@@ -401,7 +349,7 @@
                     </execution>
                 </executions>
             </plugin>
-			<!-- JaCoCo plugin -->
+            <!-- JaCoCo plugin -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -411,7 +359,7 @@
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
-					<!-- attached to Maven test phase -->
+                    <!-- attached to Maven test phase -->
                     <execution>
                         <id>report</id>
                         <phase>test</phase>
