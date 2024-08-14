@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>it.eng.parer</groupId>
     <artifactId>parer-pom</artifactId>
-    <version>6.3.1-SNAPSHOT</version>
+    <version>6.3.1</version>
     <packaging>pom</packaging>
     <name>Parer pom</name>
     <description>Parer POM di base
@@ -15,7 +15,7 @@
     </organization>
     <scm>
         <developerConnection>scm:git:https://github.com/RegioneER/parer-framework-parerpom.git</developerConnection>
-        <tag>HEAD</tag>
+        <tag>parer-pom-6.3.1</tag>
     </scm>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
