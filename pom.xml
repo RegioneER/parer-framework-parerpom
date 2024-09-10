@@ -14,8 +14,8 @@
         <name>Engineering</name>
     </organization>
     <scm>
-        <developerConnection>scm:git:git@gitlab.ente.regione.emr.it:parer/framework-parerpom.git</developerConnection>
-        <tag>parer-pom-6.4.0</tag>
+        <developerConnection>scm:git:https://github.com/RegioneER/parer-framework-parerpom.git</developerConnection>
+        <tag>HEAD</tag>
     </scm>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -74,43 +74,16 @@
 
     <distributionManagement>
         <repository>
-            <id>rel</id>
-            <url>https://nexus.ente.regione.emr.it/repository/parer-release/</url>
-        </repository>
-        <snapshotRepository>
-            <id>snap</id>
-            <url>https://nexus.ente.regione.emr.it/repository/parer-snapshot/</url>
-        </snapshotRepository>
+          <id>github</id>
+          <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom</url>
+        </repository>        
     </distributionManagement>
+
     <repositories>
         
         <repository>
-            <id>central</id>
-            <url>https://nexus.ente.regione.emr.it/repository/central/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>dcm4che</id>
-            <url>https://nexus.ente.regione.emr.it/repository/dcm4che/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>rel</id>
-            <url>https://nexus.ente.regione.emr.it/repository/parer-release/</url>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom/</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
@@ -121,65 +94,32 @@
             </snapshots>
         </repository>
         <repository>
-            <id>snap</id>
-            <url>https://nexus.ente.regione.emr.it/repository/parer-snapshot/</url>
-            <releases>
-                <enabled>false</enabled>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
+            <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>           
+        </repository>               
+        <repository>
+			<id>pentaho</id>
+			<url>https://repo.orl.eng.hitachivantara.com/artifactory/pnt-mvn/</url>
+		</repository>
+        <repository>
+			<id>cefdigital</id>
+			<name>cefdigital</name>
+			<url>https://ec.europa.eu/digital-building-blocks/artifact/content/repositories/esignaturedss/</url>
+		  </repository>
+          <repository>
+            <id>rhga</id>
+            <url>https://maven.repository.redhat.com/ga</url>
         </repository>
         <repository>
-            <id>thirdparty</id>
-            <url>https://nexus.ente.regione.emr.it/repository/thirdparty/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <url>https://nexus.ente.regione.emr.it/repository/Spring_Milestone/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>jboss-eap-maven-repository</id>
-            <name>Rer Jboss EAP proxy (RER)</name>
-            <url>https://nexus.ente.regione.emr.it/repository/jboss-eap-maven-repository</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>joinup</id>
-            <url>https://nexus.ente.regione.emr.it/repository/joinup/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
+			<id>alfresco</id>
+			<url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
+		</repository>                       
+     </repositories>
+
     <pluginRepositories>
         <pluginRepository>
             <id>central</id>
-            <url>https://nexus.ente.regione.emr.it/repository/central/</url>
+            <url>https://repo1.maven.org/maven2/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
