@@ -57,7 +57,7 @@
         <!-- miscelenous --> 
         <joda-time.version>2.12.5</joda-time.version> <!-- era 2.10.14 -->
         <jettison.version>1.5.4</jettison.version> 
-        <poi.version>4.1.2</poi.version>
+        <poi.version>5.2.3</poi.version>
         <jackson-core.version>2.13.5</jackson-core.version>
         <xalan.version>2.7.2</xalan.version>
         <xerces.version>2.12.0</xerces.version>
@@ -69,7 +69,7 @@
         <owasp.version>2.2.0.0</owasp.version>
         <!-- jaxb -->
         <jaxb-runtime.version>2.3.3.b02-redhat-00002</jaxb-runtime.version>
- 		<jaxb.version>2.3.0</jaxb.version>
+        <jaxb.version>2.3.0</jaxb.version>
         <javax.activation.version>1.2.0</javax.activation.version>
         <javax.annotation-api.version>1.3.2</javax.annotation-api.version>
         <javax.xml.soap-api.version>1.4.0</javax.xml.soap-api.version>             
@@ -79,7 +79,6 @@
         <taglibs-standard-jstlel.version>1.2.5</taglibs-standard-jstlel.version>
         <!--JDK11-->
         <jaxws-api.version>2.3.1</jaxws-api.version>
-        <jaxws-tools.version>2.3.1</jaxws-tools.version>
     </properties>
 
     <distributionManagement>
@@ -141,7 +140,7 @@
     <build>
         <pluginManagement>
             <plugins>
-                <!-- plugin base di maven -->
+				<!-- plugin base di maven -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
@@ -322,9 +321,19 @@
                     <version>3.6.0</version>
                 </plugin>
                 <plugin>
-				    <groupId>org.apache.maven.plugins</groupId>
-				    <artifactId>maven-antrun-plugin</artifactId>
-				    <version>3.1.0</version>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>3.1.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>properties-maven-plugin</artifactId>
+                    <version>1.2.0</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>keytool-maven-plugin</artifactId>
+                    <version>1.7</version>
                 </plugin>
             </plugins>
         </pluginManagement>
