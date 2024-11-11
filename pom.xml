@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>it.eng.parer</groupId>
     <artifactId>parer-pom</artifactId>
-    <version>6.4.1-SNAPSHOT</version>
+    <version>6.4.1</version>
     <packaging>pom</packaging>
     <name>Parer pom</name>
     <description>Parer POM di base
@@ -13,7 +13,7 @@
     <organization>
         <name>Engineering</name>
     </organization>
-    <scm>
+<scm>
         <developerConnection>scm:git:https://github.com/RegioneER/parer-framework-parerpom.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
@@ -23,7 +23,7 @@
         <!-- third party libraries -->
         <!-- spring --> 
         <spring.version>5.3.39</spring.version>
-        <spring.security.version>5.8.13</spring.security.version>
+        <spring.security.version>5.8.14</spring.security.version>
         <spring.security.saml.version>1.0.10.RELEASE</spring.security.saml.version>
         <!-- logging -->
         <slf4j.version>2.0.13</slf4j.version>
@@ -72,14 +72,14 @@
         <xml-apis.version>1.4.01</xml-apis.version>
     </properties>
 
-    <distributionManagement>
+<distributionManagement>
         <repository>
           <id>github</id>
           <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom</url>
         </repository>        
     </distributionManagement>
 
-    <repositories>
+<repositories>
         
         <repository>
             <id>github</id>
@@ -115,11 +115,95 @@
 			<url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
 		</repository>                       
      </repositories>
-
+    <repositories>
+        
+        <repository>
+            <id>central</id>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>dcm4che</id>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>rel</id>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>snap</id>
+            <releases>
+                <enabled>false</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>thirdparty</id>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>jboss-eap-maven-repository</id>
+            <name>Rer Jboss EAP proxy (RER)</name>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>joinup</id>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
     <pluginRepositories>
         <pluginRepository>
             <id>central</id>
-            <url>https://repo1.maven.org/maven2/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -262,7 +346,7 @@
                 <plugin>
                     <groupId>org.owasp</groupId>
                     <artifactId>dependency-check-maven</artifactId>
-                    <version>10.0.3</version>
+                    <version>10.0.4</version>
                     <executions>
                         <execution>
                             <goals>
@@ -272,11 +356,8 @@
                     </executions>
                     <configuration>
                         <name>OWASP Report</name>
-						<!-- <nexusServerId>rel</nexusServerId> -->
                         <failOnError>false</failOnError>
-						<!-- <suppressionFiles> -->
-						<!-- <suppressionFile>site/suppress.xml</suppressionFile> -->
-						<!-- </suppressionFiles> -->
+                        <nvdApiServerId>nvd</nvdApiServerId>
                     </configuration>
                 </plugin>
 				<!-- A partire dalla versione 3.1.0 verificare del classnotfound (SAX error) -->
