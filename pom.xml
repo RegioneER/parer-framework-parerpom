@@ -115,9 +115,10 @@
 		</repository>                       
      </repositories>
 
-    <pluginRepositories>
+     <pluginRepositories>
         <pluginRepository>
             <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -126,6 +127,7 @@
             </releases>
         </pluginRepository>
     </pluginRepositories>
+    
     <build>
         <pluginManagement>
             <plugins>
