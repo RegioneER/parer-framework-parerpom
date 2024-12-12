@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>it.eng.parer</groupId>
     <artifactId>parer-pom</artifactId>
@@ -13,15 +15,15 @@
     <organization>
         <name>Engineering</name>
     </organization>
-<scm>
+    <scm>
         <developerConnection>scm:git:https://github.com/RegioneER/parer-framework-parerpom.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        
+
         <!-- third party libraries -->
-        <!-- spring --> 
+        <!-- spring -->
         <spring.version>5.3.39</spring.version>
         <spring.security.version>5.8.14</spring.security.version>
         <spring.security.saml.version>1.0.10.RELEASE</spring.security.saml.version>
@@ -51,10 +53,10 @@
         <!-- http -->
         <httpclient.version>4.5.14</httpclient.version>
         <httpmime.version>4.5.14</httpmime.version>
-        <httpcore.version>4.4.16</httpcore.version>       
-        <!-- miscelenous --> 
+        <httpcore.version>4.4.16</httpcore.version>
+        <!-- miscelenous -->
         <joda-time.version>2.12.5</joda-time.version> <!-- era 2.10.14 -->
-        <jettison.version>1.5.4</jettison.version> 
+        <jettison.version>1.5.4</jettison.version>
         <poi.version>5.3.0</poi.version>
         <jackson-core.version>2.13.5</jackson-core.version>
         <xalan.version>2.7.3</xalan.version>
@@ -70,58 +72,22 @@
         <junit.version>4.13.2</junit.version>
         <taglibs-standard-jstlel.version>1.2.5</taglibs-standard-jstlel.version>
         <!-- xml -->
-		<xmlsec.version>4.0.2</xmlsec.version>
-		<!--JDK11-->
+        <xmlsec.version>4.0.2</xmlsec.version>
+        <!--JDK11-->
         <jaxws-api.version>2.3.1</jaxws-api.version>
         <xml-apis.version>1.4.01</xml-apis.version>
-         <!-- javax.jws to jakarta -->
+        <!-- javax.jws to jakarta -->
         <jboss-jakarta-xml-ws-api.version>1.0.0.Final-redhat-00001</jboss-jakarta-xml-ws-api.version>
     </properties>
 
-<distributionManagement>
-        <repository>
-          <id>github</id>
-          <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom</url>
-        </repository>        
-    </distributionManagement>
-
-<repositories>        
+    <distributionManagement>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom/</url>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>never</updatePolicy>
-            </snapshots>
+            <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom</url>
         </repository>
-        <repository>
-            <id>central</id>
-            <url>https://repo1.maven.org/maven2/</url>           
-        </repository>               
-        <repository>
-			<id>pentaho</id>
-			<url>https://repo.orl.eng.hitachivantara.com/artifactory/pnt-mvn/</url>
-		</repository>
-        <repository>
-			<id>cefdigital</id>
-			<name>cefdigital</name>
-			<url>https://ec.europa.eu/digital-building-blocks/artifact/content/repositories/esignaturedss/</url>
-		  </repository>
-          <repository>
-            <id>rhga</id>
-            <url>https://maven.repository.redhat.com/ga</url>
-        </repository>
-        <repository>
-			<id>alfresco</id>
-			<url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
-		</repository>                       
-     </repositories>
+    </distributionManagement>
+
     <repositories>
-        
         <repository>
             <id>central</id>
             <releases>
@@ -220,7 +186,7 @@
     <build>
         <pluginManagement>
             <plugins>
-				<!-- plugin base di maven -->
+                <!-- plugin base di maven -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
@@ -276,8 +242,8 @@
                     <artifactId>maven-ejb-plugin</artifactId>
                     <version>3.2.1</version>
                     <configuration>
-						<ejbVersion>3.2</ejbVersion>
-					</configuration>
+                        <ejbVersion>3.2</ejbVersion>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -299,8 +265,8 @@
                     <artifactId>maven-ear-plugin</artifactId>
                     <version>3.3.0</version>
                     <configuration>
-						<outputFileNameMapping>@{artifactId}@-@{version}@.@{extension}@</outputFileNameMapping>	
-					</configuration>
+                        <outputFileNameMapping>@{artifactId}@-@{version}@.@{extension}@</outputFileNameMapping>
+                    </configuration>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -310,8 +276,9 @@
                         <locales>it</locales>
                     </configuration>
                     <dependencies>
-						<!-- Nota bene: la versione 3.2.0 al momento non upgradabile vedi errore 
-                        : java.lang.NoSuchMethodError: org.apache.maven.wagon.shared.http.AbstractHttpClientWagon.getBufferCapacityForTransfer -->
+                        <!-- Nota bene: la versione 3.2.0 al momento non upgradabile vedi errore 
+                        : java.lang.NoSuchMethodError:
+                        org.apache.maven.wagon.shared.http.AbstractHttpClientWagon.getBufferCapacityForTransfer -->
                         <dependency>
                             <groupId>org.apache.maven.wagon</groupId>
                             <artifactId>wagon-webdav-jackrabbit</artifactId>
@@ -329,7 +296,7 @@
                     <artifactId>maven-release-plugin</artifactId>
                     <version>3.1.1</version>
                 </plugin>
-				<!-- plugin accessori esterni a maven -->
+                <!-- plugin accessori esterni a maven -->
                 <plugin>
                     <groupId>org.apache.cxf</groupId>
                     <artifactId>cxf-codegen-plugin</artifactId>
@@ -365,13 +332,14 @@
                         <nvdApiServerId>nvd</nvdApiServerId>
                     </configuration>
                 </plugin>
-				<!-- A partire dalla versione 3.1.0 verificare del classnotfound (SAX error) -->
+                <!-- A partire dalla versione 3.1.0 verificare del classnotfound (SAX error) -->
                 <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>exec-maven-plugin</artifactId>
                     <version>3.0.0</version>
                 </plugin>
-				<!-- Non aggiornabile 2.24.x: https://github.com/revelc/formatter-maven-plugin?tab=readme-ov-file#jdk-requirements -->
+                <!-- Non aggiornabile 2.24.x:
+                https://github.com/revelc/formatter-maven-plugin?tab=readme-ov-file#jdk-requirements -->
                 <plugin>
                     <groupId>net.revelc.code.formatter</groupId>
                     <artifactId>formatter-maven-plugin</artifactId>
@@ -391,7 +359,7 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.3.1</version>
-                </plugin> 
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
@@ -413,7 +381,7 @@
             <plugin>
                 <groupId>net.revelc.code.formatter</groupId>
                 <artifactId>formatter-maven-plugin</artifactId>
-				<!-- <configuration> <lineEnding>AUTO</lineEnding> </configuration> -->
+                <!-- <configuration> <lineEnding>AUTO</lineEnding> </configuration> -->
                 <executions>
                     <execution>
                         <goals>
@@ -422,7 +390,7 @@
                     </execution>
                 </executions>
             </plugin>
-			<!-- JaCoCo plugin -->
+            <!-- JaCoCo plugin -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
@@ -432,7 +400,7 @@
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
-					<!-- attached to Maven test phase -->
+                    <!-- attached to Maven test phase -->
                     <execution>
                         <id>report</id>
                         <phase>test</phase>
