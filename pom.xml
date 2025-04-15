@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>it.eng.parer</groupId>
     <artifactId>parer-pom</artifactId>
@@ -13,15 +15,15 @@
     <organization>
         <name>Engineering</name>
     </organization>
-<scm>
+    <scm>
         <developerConnection>scm:git:https://github.com/RegioneER/parer-framework-parerpom.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        
+
         <!-- third party libraries -->
-        <!-- spring --> 
+        <!-- spring -->
         <spring.version>5.3.39</spring.version>
         <spring.security.version>5.8.16</spring.security.version>
 
@@ -56,11 +58,11 @@
         <!-- http -->
         <httpclient.version>4.5.14</httpclient.version>
         <httpmime.version>4.5.14</httpmime.version>
-        <httpcore.version>4.4.16</httpcore.version>       
+        <httpcore.version>4.4.16</httpcore.version>
 
-        <!-- miscelenous --> 
+        <!-- miscelenous -->
         <joda-time.version>2.13.1</joda-time.version> <!-- era 2.10.14 -->
-        <jettison.version>1.5.4</jettison.version> 
+        <jettison.version>1.5.4</jettison.version>
         <poi.version>5.4.0</poi.version>
         <jackson-core.version>2.13.5</jackson-core.version>
         <cxf-api.version>2.7.18.SP6-redhat-1</cxf-api.version>
@@ -88,14 +90,14 @@
         <jboss-jakarta-xml-ws-api.version>1.0.0.Final-redhat-00001</jboss-jakarta-xml-ws-api.version>
     </properties>
 
-<distributionManagement>
+    <distributionManagement>
         <repository>
             <id>github</id>
             <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom</url>
         </repository>
     </distributionManagement>
 
-<repositories>
+    <repositories>
         <repository>
             <id>github</id>
             <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom/</url>
@@ -131,123 +133,27 @@
         </repository>
     </repositories>
 
-    <repositories>
-        
-        <repository>
-            <id>central</id>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>dcm4che</id>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>rel</id>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>never</updatePolicy>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>snap</id>
-            <releases>
-                <enabled>false</enabled>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>thirdparty</id>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>spring-milestones</id>
-            <name>Spring Milestones</name>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>jboss-eap-maven-repository</id>
-            <name>Rer Jboss EAP proxy (RER)</name>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>joinup</id>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>daily</updatePolicy>
-            </snapshots>
-        </repository>
-    </repositories>
-
     <pluginRepositories>
         <pluginRepository>
             <id>central</id>
+            <url>https://repo1.maven.org/maven2/</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
             <releases>
                 <updatePolicy>never</updatePolicy>
             </releases>
-        </pluginRepository>
-         <pluginRepository>
-            <id>rel</id>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-                <updatePolicy>never</updatePolicy>
-            </snapshots>
         </pluginRepository>
         <pluginRepository>
-            <id>snap</id>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom/</url>
             <releases>
-                <enabled>false</enabled>
+                <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
             </releases>
             <snapshots>
-                <enabled>true</enabled>
-                <updatePolicy>always</updatePolicy>
+                <enabled>false</enabled>
+                <updatePolicy>never</updatePolicy>
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
@@ -334,7 +240,7 @@
                     <artifactId>maven-ear-plugin</artifactId>
                     <version>3.3.0</version>
                     <configuration>
-                        <outputFileNameMapping>@{artifactId}@-@{version}@.@{extension}@</outputFileNameMapping>	
+                        <outputFileNameMapping>@{artifactId}@-@{version}@.@{extension}@</outputFileNameMapping>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -346,7 +252,8 @@
                     </configuration>
                     <dependencies>
                         <!-- Nota bene: la versione 3.2.0 al momento non upgradabile vedi errore 
-                        : java.lang.NoSuchMethodError: org.apache.maven.wagon.shared.http.AbstractHttpClientWagon.getBufferCapacityForTransfer -->
+                        : java.lang.NoSuchMethodError:
+                        org.apache.maven.wagon.shared.http.AbstractHttpClientWagon.getBufferCapacityForTransfer -->
                         <dependency>
                             <groupId>org.apache.maven.wagon</groupId>
                             <artifactId>wagon-webdav-jackrabbit</artifactId>
@@ -406,7 +313,8 @@
                     <artifactId>exec-maven-plugin</artifactId>
                     <version>3.0.0</version>
                 </plugin>
-                <!-- Non aggiornabile 2.24.x: https://github.com/revelc/formatter-maven-plugin?tab=readme-ov-file#jdk-requirements -->
+                <!-- Non aggiornabile 2.24.x:
+                https://github.com/revelc/formatter-maven-plugin?tab=readme-ov-file#jdk-requirements -->
                 <plugin>
                     <groupId>net.revelc.code.formatter</groupId>
                     <artifactId>formatter-maven-plugin</artifactId>
@@ -426,7 +334,7 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.3.1</version>
-                </plugin> 
+                </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
@@ -457,9 +365,9 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                   <configFile>eclipse/formatter.xml</configFile>
-                </configuration>                
-				<executions>
+                    <configFile>eclipse/formatter.xml</configFile>
+                </configuration>
+                <executions>
                     <execution>
                         <goals>
                             <goal>format</goal>
