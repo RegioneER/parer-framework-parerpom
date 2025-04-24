@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>it.eng.parer</groupId>
     <artifactId>parer-pom</artifactId>
-    <version>7.0.0</version>
+    <version>7.1.0</version>
     <packaging>pom</packaging>
     <name>Parer pom</name>
     <description>Parer POM di base
@@ -31,7 +31,7 @@
            Utilizzo del BOM per JBoss EAP 7.4 (jboss-eap-jakartaee8),
            che gestisce le dipendenze per Jakarta EE 8 in JBoss EAP 7.4.
         -->
-        <version.bom>7.4.18.GA</version.bom>
+        <jboss-eap-jakartaee8-bom.version>7.4.18.GA</jboss-eap-jakartaee8-bom.version>
         <jboss-jakartaee-8.0.version>1.0.1.Final-redhat-00008</jboss-jakartaee-8.0.version>
         <jboss-eap-jakartaee8-with-tools.version>7.4.18.GA</jboss-eap-jakartaee8-with-tools.version>
         <jboss-vfs.version>3.2.15.Final-redhat-00001</jboss-vfs.version>
@@ -43,15 +43,15 @@
 
         <!-- commons -->
         <commons-logging.version>1.3.3</commons-logging.version>
-        <commons-lang3.version>3.15.0</commons-lang3.version>
+        <commons-lang3.version>3.17.0</commons-lang3.version>
         <commons-fileupload.version>1.5</commons-fileupload.version> <!-- era 1.3.3 -->
         <commons-collections.version>3.2.2</commons-collections.version>
-        <commons-collections4.version>4.5.0-M2</commons-collections4.version>
-        <commons-net.version>3.9.0</commons-net.version>
-        <commons-io.version>2.16.1</commons-io.version>
-        <commons-codec.version>1.17.1</commons-codec.version>
-        <commons-compress.version>1.26.2</commons-compress.version>
-        <commons-text.version>1.12.0</commons-text.version>
+        <commons-collections4.version>4.5.0-M3</commons-collections4.version>
+        <commons-net.version>3.11.1</commons-net.version>
+        <commons-io.version>2.18.0</commons-io.version>
+        <commons-codec.version>1.18.0</commons-codec.version>
+        <commons-compress.version>1.27.1</commons-compress.version>
+        <commons-text.version>1.13.0</commons-text.version>
 
         <!-- http -->
         <httpclient.version>4.5.14</httpclient.version>
@@ -59,12 +59,10 @@
         <httpcore.version>4.4.16</httpcore.version>
 
         <!-- miscelenous -->
-        <joda-time.version>2.12.5</joda-time.version> <!-- era 2.10.14 -->
+        <joda-time.version>2.13.1</joda-time.version> <!-- era 2.10.14 -->
         <jettison.version>1.5.4</jettison.version>
-        <poi.version>5.3.0</poi.version>
+        <poi.version>5.4.0</poi.version>
         <jackson-core.version>2.13.5</jackson-core.version>
-        <xalan.version>2.7.3</xalan.version>
-        <xerces.version>2.12.2</xerces.version>
         <cxf-api.version>2.7.18.SP6-redhat-1</cxf-api.version>
         <cxf-buildtools.version>3.4.4</cxf-buildtools.version>
         <owasp.version>2.6.6.0</owasp.version>
@@ -73,8 +71,9 @@
         <jaxb-runtime.version>2.3.3.b02-redhat-00002</jaxb-runtime.version>
         <jaxb.version>2.3.0</jaxb.version>
 
-        <!-- junit last version 4.13.2 (end of maintenance), moved to junit 5 -->
-        <junit.version>4.13.2</junit.version>
+        <!-- junit -->
+        <junit.version>5.12.1</junit.version>
+        <arquillian-bom.version>1.9.3.Final</arquillian-bom.version>
         <taglibs-standard-jstlel.version>1.2.5</taglibs-standard-jstlel.version>
         <selenium-java.version>4.29.0</selenium-java.version>
         <!-- xml -->
@@ -145,6 +144,18 @@
                 <updatePolicy>never</updatePolicy>
             </releases>
         </pluginRepository>
+        <pluginRepository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/RegioneER/parer-framework-parerpom/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </pluginRepository>
     </pluginRepositories>
 
 
@@ -155,7 +166,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.13.0</version>
+                    <version>3.14.0</version>
                     <configuration>
                         <source>11</source>
                         <target>11</target>
@@ -164,7 +175,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>3.8.0</version>
+                    <version>3.11.2</version>
                     <executions>
                         <execution>
                             <id>attach-javadocs</id>
@@ -254,7 +265,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-deploy-plugin</artifactId>
-                    <version>3.1.2</version>
+                    <version>3.1.4</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -278,12 +289,12 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>3.6.2</version>
+                    <version>3.9.0</version>
                 </plugin>
                 <plugin>
                     <groupId>org.owasp</groupId>
                     <artifactId>dependency-check-maven</artifactId>
-                    <version>10.0.4</version>
+                    <version>12.1.0</version>
                     <executions>
                         <execution>
                             <goals>
@@ -342,11 +353,21 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+
         <plugins>
             <plugin>
                 <groupId>net.revelc.code.formatter</groupId>
                 <artifactId>formatter-maven-plugin</artifactId>
-                <!-- <configuration> <lineEnding>AUTO</lineEnding> </configuration> -->
+                <dependencies>
+                    <dependency>
+                        <groupId>${project.groupId}</groupId>
+                        <artifactId>parer-mvn-formatter</artifactId>
+                        <version>0.0.3</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <configFile>eclipse/formatter.xml</configFile>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
