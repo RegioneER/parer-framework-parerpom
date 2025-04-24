@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>it.eng.parer</groupId>
     <artifactId>parer-pom</artifactId>
-    <version>7.1.1-SNAPSHOT</version>
+    <version>7.1.0</version>
     <packaging>pom</packaging>
     <name>Parer pom</name>
     <description>Parer POM di base
@@ -64,6 +64,7 @@
         <poi.version>5.4.0</poi.version>
         <jackson-core.version>2.13.5</jackson-core.version>
         <cxf-api.version>2.7.18.SP6-redhat-1</cxf-api.version>
+        <cxf-buildtools.version>3.4.4</cxf-buildtools.version>
         <owasp.version>2.6.6.0</owasp.version>
 
         <!-- jaxb -->
@@ -86,6 +87,7 @@
 
         <!-- javax.jws to jakarta -->
         <jboss-jakarta-xml-ws-api.version>1.0.0.Final-redhat-00001</jboss-jakarta-xml-ws-api.version>
+
     </properties>
 
     <distributionManagement>
@@ -155,6 +157,7 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
+
 
     <build>
         <pluginManagement>
