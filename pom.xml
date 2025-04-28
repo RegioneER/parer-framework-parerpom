@@ -132,6 +132,10 @@
             <id>alfresco</id>
             <url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
         </repository>
+        <repository>
+            <id>shibboleth</id>
+            <url> https://build.shibboleth.net/maven/releases/</url>
+        </repository>       
     </repositories>
 
     <pluginRepositories>
