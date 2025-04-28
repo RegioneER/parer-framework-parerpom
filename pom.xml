@@ -132,6 +132,10 @@
             <id>alfresco</id>
             <url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
         </repository>
+        <repository>
+            <id>jbosspub</id>
+            <url>https://repository.jboss.org/nexus/content/repositories/public/</url>
+        </repository>        
     </repositories>
 
     <pluginRepositories>
