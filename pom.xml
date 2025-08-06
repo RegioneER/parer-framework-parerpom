@@ -121,10 +121,6 @@
             <url>https://repository.jboss.org/nexus/service/rest/repository/browse/public/</url>
         </repository>
         <repository>
-            <id>pentaho</id>
-            <url>https://repo.orl.eng.hitachivantara.com/artifactory/pnt-mvn/</url>
-        </repository>
-        <repository>
             <id>cefdigital</id>
             <name>cefdigital</name>
             <url>https://ec.europa.eu/digital-building-blocks/artifact/content/repositories/esignaturedss/</url>
