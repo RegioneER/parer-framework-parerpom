@@ -115,7 +115,11 @@
         <repository>
             <id>rhga</id>
             <url>https://maven.repository.redhat.com/ga</url>
-        </repository>        
+        </repository>      
+        <repository>
+            <id>jbpublic</id>
+            <url>https://repository.jboss.org/nexus/service/rest/repository/browse/public/</url>
+        </repository>   
         <repository>
             <id>pentaho</id>
             <url>https://repo.orl.eng.hitachivantara.com/artifactory/pnt-mvn/</url>
