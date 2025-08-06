@@ -121,6 +121,10 @@
             <url>https://repository.jboss.org/nexus/service/rest/repository/browse/public/</url>
         </repository>
         <repository>
+            <id>shibboleth</id>
+            <url>https://build.shibboleth.net/maven/releases/</url>
+        </repository>        
+        <repository>
             <id>cefdigital</id>
             <name>cefdigital</name>
             <url>https://ec.europa.eu/digital-building-blocks/artifact/content/repositories/esignaturedss/</url>
