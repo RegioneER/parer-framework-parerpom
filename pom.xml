@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>it.eng.parer</groupId>
     <artifactId>parer-pom</artifactId>
-    <version>7.1.2-SNAPSHOT</version>
+    <version>7.1.2</version>
     <packaging>pom</packaging>
     <name>Parer pom</name>
     <description>Parer POM di base
@@ -43,7 +43,7 @@
 
         <!-- commons -->
         <commons-logging.version>1.3.3</commons-logging.version>
-        <commons-lang3.version>3.17.0</commons-lang3.version>
+        <commons-lang3.version>3.18.0</commons-lang3.version>
         <commons-fileupload.version>1.6.0</commons-fileupload.version> <!-- era 1.3.3 -->
         <commons-collections.version>3.2.2</commons-collections.version>
         <commons-collections4.version>4.5.0-M3</commons-collections4.version>
@@ -62,7 +62,7 @@
         <joda-time.version>2.13.1</joda-time.version> <!-- era 2.10.14 -->
         <jettison.version>1.5.4</jettison.version> 
         <poi.version>5.4.0</poi.version>
-        <jackson-core.version>2.13.5</jackson-core.version>
+        <jackson-core.version>2.19.2</jackson-core.version>
         <cxf-api.version>2.7.18.SP6-redhat-1</cxf-api.version>
         <owasp.version>2.6.6.0</owasp.version>
 
@@ -82,7 +82,7 @@
         <jaxws-api.version>2.3.1</jaxws-api.version>
         <xml-apis.version>1.4.01</xml-apis.version>
         <opensaml.version>4.3.2</opensaml.version>
-        <dom4j.version>2.1.4</dom4j.version>
+        <dom4j.version>2.2.0</dom4j.version>
 
         <!-- javax.jws to jakarta -->
         <jboss-jakarta-xml-ws-api.version>1.0.0.Final-redhat-00001</jboss-jakarta-xml-ws-api.version>
@@ -132,6 +132,93 @@
         <repository>
             <id>alfresco</id>
             <url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
+        </repository>
+    </repositories>
+
+    <repositories>
+        
+        <repository>
+            <id>central</id>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>dcm4che</id>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>rel</id>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>snap</id>
+            <releases>
+                <enabled>false</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>thirdparty</id>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>jboss-eap-maven-repository</id>
+            <name>Rer Jboss EAP proxy (RER)</name>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>joinup</id>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>daily</updatePolicy>
+            </snapshots>
         </repository>
     </repositories>
 
