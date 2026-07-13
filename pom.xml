@@ -133,6 +133,10 @@
             <id>alfresco</id>
             <url>https://artifacts.alfresco.com/nexus/content/repositories/public/</url>
         </repository>
+        <repository>
+            <id>confluent</id>
+            <url>https://packages.confluent.io/maven/</url>
+        </repository>	
     </repositories>
 
 
